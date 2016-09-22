@@ -1,0 +1,27 @@
+body
+	background-color: $alice-blue
+	color: $link-water
+	font-family: 'Roboto', 'Helvetica Neue', sans-serif
+	padding: 1em
+nav
+	a
+		&:focus, &:active, &:visited, &:link, &:hover
+			color: $link-water
+			text-decoration: none
+main 
+	padding: 1em calc(1em + 15px) .6em
+	position: fixed 
+	bottom: 0
+	left: 0
+	a
+		color: $cornflower-blue
+		text-decoration: none
+		&:focus, &:active
+			outline: none
+			text-decoration: underline
+
+// Get Font-Awesome styles to work with these styles
+.fa_adjust
+	font-size: 1.5em
+	line-height: 0
+	vertical-align: sub

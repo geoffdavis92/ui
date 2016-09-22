@@ -1,0 +1,6 @@
+{
+	"scripts": {
+		"serve": "httpster -p 10001",
+		"start": "sass --watch assets/css/sass/main.sass:assets/css/main.css --sourcemap=none"
+	}
+}

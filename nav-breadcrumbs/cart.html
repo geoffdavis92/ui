@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Breadcrumbs</title>
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<!-- Google Analytics -->
+<script src="/js/lib/cookies.min.js"></script>
+<script>
+	var __ABUserStatus__;
+	if ( cookies('ab_status') ) {
+		__ABUserStatus__ = cookies('ab_status');
+	} else {
+		__ABUserStatus__ = (Math.floor(Math.random()*2)) === 0 ? 'A' : 'B';
+		cookies(
+			{ ['ab_status']: __ABUserStatus__ }, 
+			{ expires: new Date('12/31/2999')
+		});
+	}
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function() {(i[r].q = i[r].q || []).push(arguments)}, i[r].l = 1 * new Date();a = s.createElement(o),m=s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-76195099-1', 'auto');
+	ga('set', {
+		dimension1: __ABUserStatus__
+	});
+	ga('send', 'pageview');
+	// console.log(__ABUserStatus__);
+</script>
+<!-- /Google Analytics -->
+	<nav class="breadcrumbs">
+		<a href="home.html" class="breadcrumb"><i class="fa fa-home fa_adjust" aria-hidden="true"></i></a>
+		<a href="#!" class="breadcrumb"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Shopping Cart</a>
+	</nav>
+	<main>
+		<p>Interactive menu by <a href="https://geoffdavis.info">Geoff Davis</a>.</p><p>Inspired by <a href="https://site.uplabs.com/posts/breadcrumbs-daily-ui-056" target="_blank" rel="noopener noreferrer">this design</a> by <a href="https://site.uplabs.com/kleantix" target="_blank" rel="noopener noreferrer">@kleantix</a> on uplabs.com</p>
+	</main>
+</body>
+</html>

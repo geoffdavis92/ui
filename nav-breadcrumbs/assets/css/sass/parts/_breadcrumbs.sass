@@ -1,0 +1,126 @@
+// Design from http://bit.ly/2dcnh23
+.breadcrumbs
+	background: -webkit-linear-gradient(top,#fff 0, #fff 20%, $solitude 20%, $solitude  80%, #fff 80%, #fff 100%)
+	display: inline-block
+	margin-left: 15px
+	position: relative
+	&:before
+		content: ""
+		background: -webkit-linear-gradient(left,$alice-blue 0, $alice-blue 5%, transparent 5%, transparent  95%, $alice-blue 95%, $alice-blue 100%)
+		display: block
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+	&:after
+		content: ""
+		box-shadow: 0 0 33px 0 transparentize($hawkes-blue,.5)
+		display: block
+		height: 47px
+		margin: 0 auto
+		position: absolute
+		left: 25%//2%
+		top: 2px
+		width: 50%//96%
+		z-index: -1
+	.breadcrumb
+		$lean: 15
+		$bgcolor: #fff
+		background: $bgcolor
+		display: inline-block
+		margin: 0 6px
+		padding: 1em calc(1.2em + 1em)
+		position: relative
+		z-index: 1
+		&:before, &:after
+			content: ""
+			border-style: solid
+			border-width: 51px #{$lean}px 0px 0px
+			display: inline-block
+			// height: 51px
+			position: absolute
+			top: 0
+			vertical-align: middle
+			// width: 2em
+		&:before
+			border-color: transparent $bgcolor transparent transparent
+			left: -#{$lean}px
+		&:after
+			border-color: $bgcolor transparent transparent transparent
+			right: -#{$lean}px
+		&:hover
+			$bgcolor: #f8f8f8
+			background: $bgcolor
+			// color: $alice-blue
+			&:before
+				border-color: transparent $bgcolor transparent transparent
+			&:after
+				border-color: $bgcolor transparent transparent transparent
+			// &:not(:last-of-type)
+			// 	&:before, &:after
+			// 		$lean: 20
+			// 		border-width: 51px #{$lean}px 0px 0px
+			// 	&:before
+			// 		left: -#{$lean}px
+			// 	&:after
+			// 		right: -#{$lean}px
+		&:focus
+			// $bgcolor: desaturate(darken($alice-blue,2.5%),33%)
+			// background: $bgcolor
+			outline: none
+			text-decoration: underline
+			// &:before
+				// border-color: transparent $bgcolor transparent transparent
+			&:after
+				// border-color: $bgcolor transparent transparent transparent
+		&:last-of-type
+			$bgcolor: $dodger-blue
+			background: $bgcolor
+			color: $solitude
+			margin-left: 5px
+			&:before
+				border-color: transparent $bgcolor transparent transparent
+			&:after
+				border-color: $bgcolor transparent transparent transparent
+			&:hover
+				$bgcolor: $cornflower-blue
+				background: $bgcolor
+				color: $alice-blue
+				&:before
+					border-color: transparent $bgcolor transparent transparent
+				&:after
+					border-color: $bgcolor transparent transparent transparent
+			&:focus
+				$bgcolor: desaturate(darken($dodger-blue,2.5%),33%)
+				background: $bgcolor
+				outline: none
+				&:before
+					border-color: transparent $bgcolor transparent transparent
+				&:after
+					border-color: $bgcolor transparent transparent transparent
+		&:first-of-type
+			$bgcolor: $darkgray
+			background: $bgcolor
+			color: $link-water
+			margin-right: 5px
+			&:before
+				border-color: transparent $bgcolor transparent transparent
+			&:after
+				border-color: $bgcolor transparent transparent transparent
+			&:hover
+				$bgcolor: desaturate(darken($darkgray,5%),25%)
+				background: $bgcolor
+				color: $link-water
+				&:before
+					border-color: transparent $bgcolor transparent transparent
+				&:after
+					border-color: $bgcolor transparent transparent transparent
+			&:focus
+				$bgcolor: desaturate(darken($darkgray,2.5%),25%)
+				background: $bgcolor
+				outline: none
+				&:before
+					border-color: transparent $bgcolor transparent transparent
+				&:after
+					border-color: $bgcolor transparent transparent transparent
